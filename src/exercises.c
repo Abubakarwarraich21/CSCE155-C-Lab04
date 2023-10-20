@@ -25,24 +25,53 @@ int main(int argc, char **argv) {
   }
 
   //1. Rewrite the given for loop as an equivalent while loop
-  for(int i=10; i<20; i+=3) {
+  int i=10; 
+  while(i < 20) {
     printf("%d ", i);
-  }
+    i+=3;
+  }  
+  
   printf("\n");
 
   //2. Rewrite the given while loop as an equivalent for loop
-  int k = 3;
-  while(k > -4) {
+  for (int k=3; k > 4; k--)
+   {
     printf("%d ", k);
-    k--;
   }
   printf("\n");
 
   //3. Print numbers 1 thru n separated by a comma except for
   //   the last one; example: 1, 2, 3, 4, 5
+  int n;
+  
+  printf("Enter the value of n:");
+    scanf("%d", &n);
+ 
+  for(int i=1;i<=n;i++)
+  {
+     if(i==n)
+    {
+      printf("%d",n);
+    }
+    printf("%d,",n);
+  }
+  
+
 
   //4. Print squares of numbers 1 thru n separated by a comma
   //   except for the last one; example: 1, 4, 9, 16, 25
+  int n;
+  printf("Enter the numbers to take squares of:");
+    scanf("%d", &n);
+  for(int i=1;i<=n;i++)
+  {
+    if(i==n)
+    {
+      printf("%d",i*i);
+    }
+    printf("%d,",i*i );
+  }
+
 
   //5. Compute the summation of numbers 1 thru n and print
   //   the result; example: 1 + 2 + 3 + 4 + 5 = 15
